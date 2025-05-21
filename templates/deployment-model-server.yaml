@@ -33,7 +33,7 @@ spec:
           args: ["--model", "{{ .Values.model.modelName }}", "--port", "{{ .Values.model.modelServicePort }}", "--download-dir", "/models-cache", "--max-model-len", "{{ .Values.model.maxModelLength }}"]
           resources:
             limits:
-              nvidia.com/gpu: '1'
+              nvidia.com/gpu: '3'
           volumeMounts:
             - name: dshm
               mountPath: /dev/shm
